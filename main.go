@@ -52,19 +52,44 @@ import (
 
 // }
 
-func canIDrink(age int) bool {
-	switch koreanAge := age + 2; koreanAge {
+// func canIDrink(age int) bool {
+// 	switch koreanAge := age + 2; koreanAge {
 
-	case 10:
-		return false
-	case 18:
-		return true
-	}
-	return false
+// 	case 10:
+// 		return false
+// 	case 18:
+// 		return true
+// 	}
+// 	return false
+// }
+
+type person struct {
+	name    string
+	age     int
+	favFood []string
 }
 
 func main() {
-	fmt.Println(canIDrink(18))
+	favFood := []string{"kimchi", "ramen"}
+	// nico := person{"nico", 18, favFood}
+	nico := person{name: "nico", age: 18, favFood: favFood}
+	fmt.Println(nico)
+
+	// nico := map[string]string{
+	// 	"name": "nico",
+	// 	"age":  "12",
+	// }
+
+	// for key, value := range nico {
+	// 	fmt.Println(key, value)
+	// }
+
+	// names := []string{"nico", "lynn", "dal"}
+	// names = append(names, "12312")
+
+	// fmt.Println(names)
+
+	// fmt.Println(canIDrink(18))
 	// fmt.Println(canIDrink(16))
 
 	// result := superAdd(1, 2, 3, 4, 5, 6)
